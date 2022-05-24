@@ -11,7 +11,7 @@ body {
 
 
 .header {
-    background-color: antiquewhite;
+    background-color: #F596BD;
     font-size: 1.5rem;
     width:100%;
     padding: 0.6rem;
@@ -25,30 +25,31 @@ body {
 }
 .titulo {
     font-family: 'Oleo Script Swash Caps', cursive;
-    font-size: 3.2rem;
+    font-size: 2.5rem;
 
 }
 
-.navegador ul {
-    margin: 0.3rem 1.2;
-    padding: 0.3rem;
+.navegador {
+    display: flex;
+    justify-content: space-between;
+}
+
+.listahome {
+    display: flex;
     list-style: none;
-    text-align: right;
-
-}
-
-.navegador ul li {
-    display: inline-block;
+    align-items: center;
+    color: #474747;
 }
 
 .navegador ul li a {
     text-decoration: underline;
-    color: black;
+    font-weight: 1000;
+    color: #4B4A49;
     margin: 0.3rem;
     padding: 0.3rem;
     transition-property: background;
     transition-duration: 1s;
-    transition-delay: 0.2s;
+    transition-delay: 0.1s;
     border-radius: 2em;
 }
 
@@ -57,15 +58,23 @@ body {
 }
 
 @media all and (max-width: 480px) {
-    .navegador ul li {
+    .navegador {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .titulo {
+        font-size: 2rem;
+    }
+    .listahome {
         width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
     }
-    .titulo {
-        font-size: 2rem;
-    
+    .listahome li {
+        padding: 0.3rem;
     }
 }
 
@@ -110,9 +119,24 @@ body {
     align-items: center;
     padding: 3rem;
     margin: 1.5rem;
+    background-color: #F596BD;
+}
+
+.articulos__texto {
+    color: white;
+    line-height: 1.5rem;
+}
+
+strong {
+    font-size: 1.6rem;
+    color: #836d1a;
+    font-weight: 800;
 }
 
 @media all and (max-width: 480px) {
+    .contenedorindex {
+        padding: 1.3rem;
+    }
     .subtitulo {
         font-size: 2.5rem;
     }
@@ -121,6 +145,8 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin: 0 auto;
+        
     }
     .imagenes {
         width: 100%;
@@ -130,17 +156,91 @@ body {
 
 /*seccion pestañas*/
 
+.subtitulopestañas {
+    font-size: 3rem;
+    text-align: center;
+    padding: 1rem;
+}
+
 .contenedor1 {
-    background-color: blanchedalmond;
-    width: 85%;
+    background-color: rgba(109, 98, 98, 0.79);
+    padding: 2rem;
+    margin: 2.5rem 0;
+}
+
+.contenedor1__articulo {
+    display: flex;
+    *width: 100%;
+    max-width: 1200px;
     margin: 0 auto;
+    padding: 1.2rem;
+}
+.contenedor1__div {
+    padding: 0 1.2rem;
 }
 
-.articulos {
-    margin: 0.6rem 0 ;
-    padding: 0.6rem;
+.contenedor1__parrafo {
+    padding: 0.5rem 1.2rem;
+    color: #fafafa;
+    border-style: solid;
+    border-color: #fafafa;
+    box-shadow: 12px 11px 15px 3px rgba(33,29,29,0.75);
+    -webkit-box-shadow: 12px 11px 15px 3px rgba(33,29,29,0.75);
+    -moz-box-shadow: 12px 11px 15px 3px rgba(33,29,29,0.75);
 }
 
+@media all and (max-width: 480px) {
+    .contenedor1 {
+        width: 100%;
+    }
+    .contenedor1__articulo {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.contenedor2 {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    align-items: center;
+}
+
+.contenedor2__articulo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+    
+}
+.contenedor2__articulo h2 {
+    font-size: 3rem;
+    padding: 1.2rem;
+}
+
+.contenedor2__parrafo {
+    line-height: 1.5rem;
+    padding: 1.6rem;
+    color: #fafafa;
+    background-color: #61605f;
+    box-shadow: 10px 8px 12px 4px rgba(133,116,116,0.78);
+    -webkit-box-shadow: 10px 8px 12px 4px rgba(133,116,116,0.78);
+    -moz-box-shadow: 10px 8px 12px 4px rgba(133,116,116,0.78);
+}
+
+@media all and (max-width: 480px) {
+    .contenedor2 {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
 
 
 .foot {
