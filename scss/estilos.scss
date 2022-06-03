@@ -1,3 +1,7 @@
+@import "variables";
+@import "mixins";
+
+
 *{
     margin: 0;
     padding: 0;
@@ -73,17 +77,21 @@ body {
     }
 }
 
-.subtitulo {
-    display: flex;
-    justify-content: center;
-    padding: 1.2rem;
-    margin: 2rem;
-    font-size: 3rem;
+.subtitulo-index {
+    @include subtitulos;
+    color: map-get($map: $colores, $key: 'bordo');
+    font-size: map-get($map: $dimension, $key: '2');
     @media all and (max-width: 480px) {
         font-size: 2.3rem;
         padding: 0.4rem;
     }
     
+}
+
+.subtitulo2-index {
+    @include subtitulos;
+    color: map-get($map: $colores, $key:'violeta');
+    font-size: map-get($map: $dimension, $key:'2' );
 }
 
 .contenedorindex {
@@ -107,24 +115,6 @@ body {
             align-items: center;
             margin: 0 auto;
         }
-        .imagenes {
-            transition: all 0.6s ease;
-            cursor: pointer;
-            padding: 20px;
-            -ms-box-shadow: -1px -1px 0px 0px #836d1a;
-            -webkit-box-shadow: -1px -1px 0px 0px #836d1a;
-            -o-box-shadow: -1px -1px 0px 0px #836d1a;
-            box-shadow: -1px -1px 0px 0px #836d1a;
-            -mox-box-shadow: -1px -1px 0px 0px #836d1a;
-            @media all and (max-width: 480px) {
-                width: 100%;
-                margin-bottom: 3rem;
-            }
-            &:hover {
-                transform: scale(1.05);
-                cursor: pointer;
-            }
-        }
         .articulos__texto {
             color: white;
             line-height: 1.5rem;
@@ -136,6 +126,111 @@ body {
         }
     }
 }
+.imagenes {
+    transition: all 0.6s ease;
+    cursor: pointer;
+    padding: 20px;
+    -ms-box-shadow: -1px -1px 0px 0px #836d1a;
+    -webkit-box-shadow: -1px -1px 0px 0px #836d1a;
+    -o-box-shadow: -1px -1px 0px 0px #836d1a;
+    box-shadow: -1px -1px 0px 0px #836d1a;
+    -mox-box-shadow: -1px -1px 0px 0px #836d1a;
+    @media all and (max-width: 480px) {
+        width: 100%;
+        margin-bottom: 3rem;
+    }
+    &:hover {
+        transform: scale(1.05);
+        cursor: pointer;
+    }
+}
+/*sección pestañas*/ 
+
+.subtitulo-pestañas {
+    @include subtitulos;
+    color: map-get($map: $colores, $key:'gris');
+    font-size: map-get($map: $dimension, $key:'2');
+}
+
+.contenedor1 {
+    background-color: rgba(109, 98, 98, 0.79);
+    padding: 2rem;
+    margin: 2.5rem 0;
+    @media all and (max-width: 480px) {
+            width: 100%;
+        }
+    .contenedor1__articulo {
+        display: flex;
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 1.2rem;
+        @media all and (max-width: 480px) {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    .contenedor1__div {
+        padding: 0 1.2rem;
+    }
+}
+.contenedor1__parrafo {
+        padding: 0.5rem 1.2rem;
+        color: #fafafa;
+        border-style: solid;
+        border-color: #fafafa;
+        box-shadow: 10px 8px 12px 4px rgba(133,116,116,0.78);
+            -webkit-box-shadow: 10px 8px 12px 4px rgba(133,116,116,0.78);
+            -moz-box-shadow: 10px 8px 12px 4px rgba(133,116,116,0.78);
+    }
+
+
+
+.contenedor2 {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    align-items: center;
+    @media all and (max-width: 480px) {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    .contenedor2__articulo {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 1.5rem;
+        .subtitulo-pestañas2 {
+            @include subtitulos;
+            color: map-get($map: $colores, $key:'rosa' );
+            font-size: map-get($map: $dimension, $key:'2' );
+            @media all and (max-width:480px){
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+}
+
+.contenedor2__parrafo {
+    @extend .contenedor1__parrafo;
+    line-height: 1.5rem;
+    padding: 1.6rem;
+    color: #fafafa;
+    background-color: #61605f;
+    border-style: none;
+}
+
 
 .foot {
     background-color: rgb(41, 38, 38);
