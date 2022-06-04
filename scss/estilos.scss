@@ -152,6 +152,14 @@ body {
     font-size: map-get($map: $dimension, $key:'2');
 }
 
+.parrafo-pestañas {
+    padding: 0 5rem;
+    font-family: 'Cormorant Upright', serif;
+    font-size: 2rem;
+    background: rgb(203,168,214);
+background: linear-gradient(0deg, rgba(203,168,214,1) 0%, rgba(252,233,251,1) 100%);
+}
+
 .contenedor1 {
     background-color: rgba(109, 98, 98, 0.79);
     padding: 2rem;
@@ -162,6 +170,7 @@ body {
     .contenedor1__articulo {
         display: flex;
         width: 100%;
+        align-items: center;
         max-width: 1200px;
         margin: 0 auto;
         padding: 1.2rem;
@@ -186,7 +195,6 @@ body {
             -webkit-box-shadow: 10px 8px 12px 4px rgba(133,116,116,0.78);
             -moz-box-shadow: 10px 8px 12px 4px rgba(133,116,116,0.78);
     }
-
 
 
 .contenedor2 {
@@ -229,6 +237,14 @@ body {
     color: #fafafa;
     background-color: #61605f;
     border-style: none;
+}
+
+/*tratamientos capilares*/
+
+.subtitulo-capilares {
+    @include subtitulos;
+    color: map-get($map: $colores, $key:'gris');
+    font-size: 3rem;
 }
 
 
