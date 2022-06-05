@@ -150,6 +150,10 @@ body {
     @include subtitulos;
     color: map-get($map: $colores, $key:'gris');
     font-size: map-get($map: $dimension, $key:'2');
+    @media all and (max-width: 480px) {
+        font-size: 2.3rem;
+        padding: 0.4rem;
+    }
 }
 
 .parrafo-pestañas {
@@ -157,7 +161,12 @@ body {
     font-family: 'Cormorant Upright', serif;
     font-size: 2rem;
     background: rgb(203,168,214);
-background: linear-gradient(0deg, rgba(203,168,214,1) 0%, rgba(252,233,251,1) 100%);
+    background: linear-gradient(0deg, rgba(203,168,214,1) 0%, rgba(252,233,251,1) 100%);
+    @media all and (max-width: 480px) {
+        width: 100%;
+        font-size: 1.2rem;
+        padding: 0.5rem;
+    }
 }
 
 .contenedor1 {
@@ -240,12 +249,139 @@ background: linear-gradient(0deg, rgba(203,168,214,1) 0%, rgba(252,233,251,1) 10
 }
 
 /*tratamientos capilares*/
+.contenedor-subtitulo {
+    .descripcion-subtitulo {
+        color: #000;
+        background-color: #caadd4;
+        font-size: 2rem;
+        padding: 1.2rem;
+        b {
+            color: #836d1a;
+        }
+        @media all and (max-width: 480px) {
+            width: 100%;
+            font-size: 1.2rem;
+            padding: 0.5rem;
+        }
+    }
+}
 
 .subtitulo-capilares {
     @include subtitulos;
     color: map-get($map: $colores, $key:'gris');
-    font-size: 3rem;
+    font-size: 3rem;   
+    @media all and (max-width: 480px) {
+        font-size: 2.3rem;
+        padding: 0.4rem;
+    }
 }
+
+.contenedor-capilares {
+    @extend .contenedorindex;
+    .articulos-capilares {
+        @extend .articulos__home;
+        background-color: #e3d4f4;
+        @media all and (max-width: 480px) {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 1rem auto;
+        }
+        .descripcion-articulos-capilares {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 1.5rem;
+                .titulo-articulo {
+                    @include titulo_articulos;
+            }
+                .descripcion-parrafo {
+                    font-size: 1.2rem;
+                    line-height: 1.6rem;
+            }
+        }
+    }
+}
+
+
+/*seccion tratamientos corporales*/
+
+.subtitulo-corporales {
+    @include subtitulos;
+    color: map-get($map: $colores, $key:'gris');
+    font-size: 3rem;
+    @media all and (max-width: 480px) {
+        font-size: 2.3rem;
+        padding: 0.4rem;
+    }
+}
+
+.contenedor-corporales {
+    @extend .contenedorindex;
+}
+
+.articulos-corporales {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #e3d4f4;
+    margin-bottom: 2rem;
+    .titulo-articulo {
+        @include titulo_articulos;
+    }
+    .parrafo-art-corporales{
+        font-size: 1.3rem;
+        line-height: 1.5rem;
+        padding: 0.8rem 5rem;
+        font-weight: 800;
+    }
+    @media all and (max-width: 480px) {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 1rem auto;
+    }
+}
+
+
+/* seccion colorimetria */
+
+.subtitulo-colorimetria {
+    @include subtitulos;
+    color: map-get($map: $colores, $key:'gris');
+    font-size: 3rem;
+    @media all and (max-width: 480px) {
+        font-size: 2.3rem;
+        padding: 0.4rem;
+    }
+}
+
+.contenedor-colorimetria {
+    @extend .contenedorindex;
+}
+
+.articulos-colorimetria {
+    @extend .articulos-corporales;
+    padding: 1rem;
+    .titulo-articulo {
+        @include titulo_articulos;
+    }
+    .parrafo-art-color {
+        @extend .parrafo-art-corporales;
+    }
+    @media all and (max-width: 480px) {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 1rem auto;
+    }
+}
+
 
 
 .foot {
@@ -275,5 +411,3 @@ background: linear-gradient(0deg, rgba(203,168,214,1) 0%, rgba(252,233,251,1) 10
         }
     }
 }
-
-
