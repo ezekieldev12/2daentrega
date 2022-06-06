@@ -623,6 +623,7 @@ body {
 
 .foot {
   background-color: #292626;
+  color: #fafafa;
   font-size: 1rem;
   padding: 0.6rem;
   height: 100%;
@@ -636,6 +637,8 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  line-height: 1.3rem;
+  letter-spacing: 0.10rem;
 }
 
 .foot .div1 ul {
