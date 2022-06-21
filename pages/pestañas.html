@@ -4,42 +4,62 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/estilos.css">
     <link href="https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps&display=swap" rel="stylesheet">
     <title>Pestañas</title>
 </head>
 <body>
-    <header class="header">
-        <nav class="navegador">
-            <div class="titulo">
-                <h1>Anat belleza</h1>
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#f28482;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"> <img src="../img/anat2.jpeg" width="100px" alt=""></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-5 mb-4 mb-lg-0 w-100 justify-content-end">
+                    <li class="nav-item px-2 fs-2">
+                        <a class="nav-link px-2" aria-current="page" href="../index.html">inicio</a>
+                    </li>
+                    <li class="nav-item px-2 fs-2">
+                        <a class="nav-link" href="pestañas.html">pestañas</a>
+                    </li>
+                    <li class="nav-item px-2 fs-2">
+                        <a class="nav-link px-2" href="tratamientosc.html">tratamientos capirales</a>
+                    </li>
+                    <li class="nav-item px-2 fs-2">
+                        <a class="nav-link" href="tratamientosco.html">tratamientos corporales</a>
+                    </li>
+                    <li class="nav-item px-2 fs-2">
+                        <a class="nav-link" href="colorimetria.html">Colorimetria</a>
+                    </li>
+                </ul>
             </div>
-            <ul class="listahome">
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="pestañas.html">Pestañas</a></li>
-                <li><a href="tratamientosc.html">Tratamientos capilares</a></li>
-                <li><a href="tratamientosco.html">Tratamientos corporales</a></li>
-                <li><a href="colorimetria.html">Colorimetría</a></li>
-            </ul>
-        </nav>
-    </header>
-    <div class="subtitulo-pestañas">
-        <h3>Tipos de extensiones de pestañas</h3>
+        </div>
+    </nav>
+    <div class="contenedor-sub-pestañas">
+        <div class="subtitulo-pestañas">
+            <h3>Tipos de extensiones de pestañas</h3>
+        </div>
+        <div class="parrafo-pestañas">
+            <p>No importa cómo sean tus ojos: pequeños, grandes, almendrados, redondos, caídos, rasgados, marrones, azules… Sean como sean, nuestro equipo analizará tu rostro y te aconsejará el efecto y volumen que más se adapte a tus rasgos y personalidad, desde pestañas clásicas hasta volumen ruso. Cuando te mires al espejo por primera vez te preguntarás por qué has tardado tanto en venir a visitarnos.</p>
+        </div>
     </div>
-    <div class="parrafo-pestañas">
-        <p>No importa cómo sean tus ojos: pequeños, grandes, almendrados, redondos, caídos, rasgados, marrones, azules… Sean como sean, nuestro equipo analizará tu rostro y te aconsejará el efecto y volumen que más se adapte a tus rasgos y personalidad, desde pestañas clásicas hasta volumen ruso. Cuando te mires al espejo por primera vez te preguntarás por qué has tardado tanto en venir a visitarnos.</p>
-    </div>
-
-    <div class="subtitulo-pestañas">
-        <h3>Lifting</h3>
-    </div>
+    
     <section  class="contenedor1">
-        <article class="contenedor1__articulo">
-            <img class="imagenes" src="../img/lifting.jpeg" width="500px" height="400px" alt="lifting">
-            <div class="contenedor1__div">
-                <p class="contenedor1__parrafo">Es un tratamiento que eleva la curvatura de tus pestañas, resaltando la expresión de la mirada y alargando las pestañas desde la raíz, sin utilizar pelo sintético. Es una solución rápida que reemplaza la búsqueda de la máscara de pestañas perfecta y te ayuda a obtener la largura y el volumen deseados.
-                </p>
-            </div>
+        <article   class="contenedor1__articulo">
+            
+                <div class="subtitulo-pestañas">
+                    <h3>Lifting</h3>
+                </div>
+                <div>
+                    <img class="imagenes" src="../img/lifting1.jpeg" alt="lifting">
+                </div>
+                <div>
+                    <p class="contenedor1__parrafo">Es un tratamiento que eleva la curvatura de tus pestañas, resaltando la expresión de la mirada y alargando las pestañas desde la raíz, sin utilizar pelo sintético. Es una solución rápida que reemplaza la búsqueda de la máscara de pestañas perfecta y te ayuda a obtener la largura y el volumen deseados.
+                    </p>
+                </div>
+            
         </article>
     </section>
     <section class="contenedor2">    
@@ -47,7 +67,7 @@
             <div class="subtitulo-pestañas2">
                 <h2>2D 3D 4D</h2>
             </div>
-            <img class="imagenes" src="../img/pestaña1.jpeg" width="500px" height="400px"  alt="pestaña1">
+            <img class="imagenes" src="../img/pestaña1.jpeg"   alt="pestaña1">
             <div>
                 <p class="contenedor2__parrafo" >Es uno de nuestros diseños estrella. Si las 1D consiguen un efecto rímel, con nuestras 2D, 3D, 4D conseguirás el afamado eyeliner effect. Es el mismo procedimiento que las extensiones clásicas pero con un volumen más elevado, deja una mirada más fuerte.
                 </p>
@@ -57,7 +77,7 @@
             <div class="subtitulo-pestañas2">
                 <H2>Clásicas</H2>
             </div>
-            <img class="imagenes" src="../img/pestañasclasicas.jpeg" width="500px" height="400px" alt="pestañasclasicas.jpeg">
+            <img class="imagenes" src="../img/pestañasclasicas.jpeg"  alt="pestañasclasicas.jpeg">
             <div>
                 <p class="contenedor2__parrafo">Las extensiones de pestañas tienen la función de aumentar la cantidad de pestañas para intensificar la mirada y agrandar los ojos. Se colocan pestañas individuales (una a una) de forma curveada para que luzcan como si fueran tuyas.
                 </p>
@@ -77,6 +97,6 @@
         </div>
         
     </footer>
-    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>
