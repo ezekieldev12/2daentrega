@@ -116,7 +116,7 @@ body {
     -o-box-shadow: -1px -1px 0px 0px #836d1a;
     box-shadow: -1px -1px 0px 0px #836d1a;
     -mox-box-shadow: -1px -1px 0px 0px #836d1a;
-    max-width: 900px;
+    max-width: 600px;
     @media  all and (max-width: 576px) {
         width: 100%;
         margin-bottom: 1.5rem;
@@ -130,6 +130,7 @@ body {
     }
     @media  all and (max-width: 1440px) {
         width: 100%;
+        
     }
     &:hover {
         transform: scale(1.05);
@@ -263,7 +264,7 @@ body {
     @media all and (max-width: 1400px) {
         padding: 1.8rem;
     }
-    }
+}
 
 
 .contenedor2 {
@@ -325,13 +326,13 @@ body {
     }
 }
 
-/*.contenedor2__parrafo {
+.contenedor2__parrafo {
     @extend .contenedor1__parrafo;
     line-height: 1.5rem;
     padding: 1.6rem;
     color: #fafafa;
     background-color: #61605f;
-    border-style: none;/*
+    border-style: none;
 }
 
 /*tratamientos capilares*/
@@ -425,22 +426,38 @@ body {
     .titulo-articulo {
         @include titulo_articulos;
     }
+    .contenedor-imagenes-corp {
+        display: flex;
+        flex-direction: row;
+        @media all and (max-width:576px) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        @media all and (max-width:768px) {
+            display: flex;
+            flex-direction: column;
+        }
+        @media all and(max-width:1024px) {
+            display: flex;
+            flex-direction: column;
+        }
+    }
     .parrafo-art-corporales{
         font-size: 1.3rem;
         line-height: 1.5rem;
         padding: 0.8rem 5rem;
         font-weight: 800;
-    }
-    @media all and (max-width: 480px) {
+    @media all and (max-width: 576px) {
         width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin: 1rem auto;
+        padding: 0.50rem 0.35rem;
+        //margin: 1rem auto;
     }
 }
-
-
+}
 /* seccion colorimetria */
 
 .subtitulo-colorimetria {
@@ -463,10 +480,30 @@ body {
     .titulo-articulo {
         @include titulo_articulos;
     }
+    .contenedor-imagenes-fantasia {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        @media all and (max-width:576px) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        @media all and (max-width:768px) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        @media all and (max-width:1024px) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
     .parrafo-art-color {
         @extend .parrafo-art-corporales;
     }
-    @media all and (max-width: 480px) {
+    @media all and (max-width: 576px) {
         width: 100%;
         display: flex;
         flex-direction: column;

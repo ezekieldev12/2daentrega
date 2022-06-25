@@ -133,7 +133,7 @@ body {
   -o-box-shadow: -1px -1px 0px 0px #836d1a;
   box-shadow: -1px -1px 0px 0px #836d1a;
   -mox-box-shadow: -1px -1px 0px 0px #836d1a;
-  max-width: 900px;
+  max-width: 600px;
 }
 @media all and (max-width: 576px) {
   .imagenes {
@@ -280,7 +280,7 @@ body {
   }*/
 }
 
-.contenedor1__parrafo {
+.contenedor1__parrafo, .contenedor2__parrafo {
   padding: 0.5rem 1.2rem;
   color: #fafafa;
   border-style: solid;
@@ -290,17 +290,17 @@ body {
   -moz-box-shadow: 10px 8px 12px 4px rgba(133, 116, 116, 0.78);
 }
 @media all and (max-width: 768px) {
-  .contenedor1__parrafo {
+  .contenedor1__parrafo, .contenedor2__parrafo {
     padding: 1.5rem;
   }
 }
 @media all and (max-width: 992px) {
-  .contenedor1__parrafo {
+  .contenedor1__parrafo, .contenedor2__parrafo {
     padding: 2.1rem;
   }
 }
 @media all and (max-width: 1400px) {
-  .contenedor1__parrafo {
+  .contenedor1__parrafo, .contenedor2__parrafo {
     padding: 1.8rem;
   }
 }
@@ -385,13 +385,12 @@ body {
   }
 }
 
-/*.contenedor2__parrafo {
-    @extend .contenedor1__parrafo;
-    line-height: 1.5rem;
-    padding: 1.6rem;
-    color: #fafafa;
-    background-color: #61605f;
-    border-style: none;/*
+.contenedor2__parrafo {
+  line-height: 1.5rem;
+  padding: 1.6rem;
+  color: #fafafa;
+  background-color: #61605f;
+  border-style: none;
 }
 
 /*tratamientos capilares*/
@@ -496,19 +495,42 @@ body {
   font-size: 2.3rem;
   padding: 0.5rem 0;
 }
+.articulos-corporales .contenedor-imagenes-corp, .articulos-colorimetria .contenedor-imagenes-corp {
+  display: flex;
+  flex-direction: row;
+}
+@media all and (max-width: 576px) {
+  .articulos-corporales .contenedor-imagenes-corp, .articulos-colorimetria .contenedor-imagenes-corp {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+@media all and (max-width: 768px) {
+  .articulos-corporales .contenedor-imagenes-corp, .articulos-colorimetria .contenedor-imagenes-corp {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media all and (max-width: 1024px) {
+  .articulos-corporales .contenedor-imagenes-corp, .articulos-colorimetria .contenedor-imagenes-corp {
+    display: flex;
+    flex-direction: column;
+  }
+}
 .articulos-corporales .parrafo-art-corporales, .articulos-colorimetria .parrafo-art-corporales, .articulos-colorimetria .parrafo-art-color {
   font-size: 1.3rem;
   line-height: 1.5rem;
   padding: 0.8rem 5rem;
   font-weight: 800;
 }
-@media all and (max-width: 480px) {
-  .articulos-corporales, .articulos-colorimetria {
+@media all and (max-width: 576px) {
+  .articulos-corporales .parrafo-art-corporales, .articulos-colorimetria .parrafo-art-corporales, .articulos-colorimetria .parrafo-art-color {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 1rem auto;
+    padding: 0.5rem 0.35rem;
   }
 }
 
@@ -537,7 +559,33 @@ body {
   font-size: 2.3rem;
   padding: 0.5rem 0;
 }
-@media all and (max-width: 480px) {
+.articulos-colorimetria .contenedor-imagenes-fantasia {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+@media all and (max-width: 576px) {
+  .articulos-colorimetria .contenedor-imagenes-fantasia {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+@media all and (max-width: 768px) {
+  .articulos-colorimetria .contenedor-imagenes-fantasia {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+@media all and (max-width: 1024px) {
+  .articulos-colorimetria .contenedor-imagenes-fantasia {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+@media all and (max-width: 576px) {
   .articulos-colorimetria {
     width: 100%;
     display: flex;
