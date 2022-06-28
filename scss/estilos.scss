@@ -1,8 +1,8 @@
 @import "base/mixins";
 @import "base/variables";
-
-
-
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kalam&display=swap%27');
+@import url('https://fonts.googleapis.com/css2?family=Marck+Script&display=swap%27');
 
 *{
     margin: 0;
@@ -11,16 +11,18 @@
 }
 
 body {
-    font-size:1.2rem;
+    font-size:1.8rem;
+    font-family: 'Kalam', cursive;
+    font-family: 'Marck Script', cursive;
 }
 
-
-
-.subtitulo-index {
-    h2 {
+.nav-link{
+    font-family: 'Pacifico', cursive;
+}
+.contenedorsub__subtituloindex {
         @include subtitulos;
     color: map-get($map: $colores, $key: 'rosa');
-    font-size: map-get($map: $dimension, $key: '2');
+    font-size: map-get($map: $dimension, $key:'2');
     @media all and (max-width: 576px) {
         font-size: 2rem;
         padding: 0.4rem;
@@ -29,13 +31,6 @@ body {
         align-items: center;
         }
     }
-}
-
-.subtitulo2-index {
-    @include subtitulos;
-    color: map-get($map: $colores, $key:'violeta');
-    font-size: map-get($map: $dimension, $key:'2' );
-}
 
 .contenedorindex {
     
@@ -55,9 +50,6 @@ body {
         width: 100%;
         padding: 1rem;
     }
-    /*@media all and (max-width: 1440px) {
-        width: 100%;
-    }*/
 }
     .articulos__home {
         width: 100%;
@@ -98,8 +90,8 @@ body {
         }
         .articulos__texto {
             color: white;
-            font-size: 1.6rem;
-            line-height: 1.5rem;
+            font-size: 2rem;
+            line-height: 2rem;
             padding: 0.25rem;
             strong {
                 font-size: 2rem;
@@ -118,13 +110,16 @@ body {
     max-width: 600px;
     @media  all and (max-width: 1440px) {
         width: 100%;
+        transition: none;
     }
     @media  all and (max-width: 1024px) {
         width: 100%;
         padding: 1rem;
+        transition: none;
     }
     @media  all and (max-width: 768px) {
         width: 100%;
+        transition: none;
     }
     @media  all and (max-width: 576px) {
         width: 100%;
@@ -149,29 +144,23 @@ body {
         width: 100%;
         padding: 0.5rem;
     }
-
-
     .subtitulo-pestañas {
-        h3 {
-            @include subtitulos;
-            @media all and (max-width: 576px) {
-                width: 100%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                font-size: 2rem;
-                padding: 2rem;
-                margin: 0 auto;
-                text-decoration: none;
+        @include subtitulos;
+        @media all and (max-width: 576px) {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            padding: 2rem;
+            margin: 0 auto;
+            text-decoration: none;
         }
     }
-}
-
     .parrafo-pestañas {
         width: 95%;
         margin: 0 auto;
         padding: 0 5rem;
-        font-family: 'Cormorant Upright', serif;
         font-size: 2rem;
         background: rgb(203,168,214);
         background: linear-gradient(0deg, rgba(203,168,214,1) 0%, rgba(252,233,251,1) 100%);
@@ -196,7 +185,7 @@ body {
 
 .contenedor1 {
     width: 100%;
-    background-color: rgba(109, 98, 98, 0.79);
+    background-color: #F596BD;
     padding: 1.2rem;
     margin: 0 auto;
     .contenedor1__articulo {
@@ -208,8 +197,9 @@ body {
         margin: 0 auto;
         padding: 1.2rem;
         .subtitulo-pestañas {
-            h3{
             @include subtitulos;
+            color: map-get($map: $colores, $key: 'bordo');
+            font-size: map-get($map: $dimension, $key:'2');
             @media all and (max-width:576px){
                 width: 100%;
                 display: flex;
@@ -217,7 +207,6 @@ body {
                 justify-content: center;
                 align-items: center;
                 margin: 0;
-                }
             }
         }
     }
@@ -228,9 +217,9 @@ body {
         color: #fafafa;
         border-style: solid;
         border-color: #fafafa;
-        box-shadow: 10px 8px 12px 4px rgba(133,116,116,0.78);
-            -webkit-box-shadow: 10px 8px 12px 4px rgba(133,116,116,0.78);
-            -moz-box-shadow: 10px 8px 12px 4px rgba(133,116,116,0.78);
+        box-shadow: 10px 8px 12px 4px rgba(0,0,0,0.78);
+            -webkit-box-shadow: 10px 8px 12px 4px rgba(0,0,0,0.78);
+            -moz-box-shadow: 10px 8px 12px 4px rgba(0,0,0,0.78);
             
     @media all and (max-width: 768px) {
         padding: 1.5rem;
@@ -243,9 +232,9 @@ body {
     }
 }
 
-
 .contenedor2 {
-    width: 100%;
+    width: 85%;
+    max-width: 850px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -322,7 +311,7 @@ body {
         b {
             color: #836d1a;
         }
-        @media all and (max-width: 480px) {
+        @media all and (max-width: 576px) {
             width: 100%;
             font-size: 1.2rem;
             padding: 0.5rem;
@@ -333,7 +322,7 @@ body {
     @include subtitulos;
     color: map-get($map: $colores, $key:'gris');
     font-size: 3rem;   
-    @media all and (max-width: 480px) {
+    @media all and (max-width: 576px) {
         font-size: 2.3rem;
         padding: 0.4rem;
     }
@@ -342,6 +331,7 @@ body {
 
 .contenedor-capilares {
     @extend .contenedorindex;
+    background-color: #552036;
     .articulos-capilares {
         @extend .articulos__home;
         background-color: #e3d4f4;
@@ -369,7 +359,7 @@ body {
                     @include titulo_articulos;
             }
                 .descripcion-parrafo {
-                    font-size: 1.2rem;
+                    font-size: 2rem;
                     line-height: 1.6rem;
             }
         }
@@ -391,6 +381,7 @@ body {
 
 .contenedor-corporales {
     @extend .contenedorindex;
+    background-color: #552036;
 }
 
 .articulos-corporales {
@@ -420,18 +411,17 @@ body {
         }
     }
     .parrafo-art-corporales{
-        font-size: 1.3rem;
+        font-size: 2rem;
         line-height: 1.5rem;
         padding: 0.8rem 5rem;
-    @media all and (max-width: 576px) {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 0.50rem 0.35rem;
-        //margin: 1rem auto;
+        @media all and (max-width: 576px) {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0.50rem 0.35rem;
+        }
     }
-}
 }
 /* seccion colorimetria */
 
@@ -494,46 +484,6 @@ body {
 
 #titulo-contacto {
     @include subtitulos;
+    font-family: 'Pacifico', cursive;
 }
 
-#form {
-    background-image: url('../img/fondo.jpeg');
-    background-size: cover;
-    @media all and (max-width:576px){
-        width: 100%;
-    }
-}
-
-
-
-.foot {
-    background-color: rgb(41, 38, 38);
-    color: #fafafa;
-    font-size: 1rem;
-    padding: 0.6rem;
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    line-height: 1.3rem;
-    letter-spacing: 0.10rem;
-    margin-top: 1rem;
-    .div1 {
-        ul {
-        padding: 2rem;
-        li{
-        display: inline;
-        padding: 1.3rem 1.6rem;
-            }
-        }    
-    }
-}
-
-.foot {
-    .div2 {
-        padding: 1.6rem;
-        .textofooter{
-            padding: 0.6rem;
-        }
-    }
-}
